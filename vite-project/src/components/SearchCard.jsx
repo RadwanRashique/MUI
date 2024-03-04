@@ -10,11 +10,11 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import TextField from "@mui/material/TextField";
-
+import Chip from '@mui/material/Chip'
 function SearchCard() {
   return (
     <>
-      <Card style={{ width: "25%", height: "150px" }} sx={{ padding: "20px" }}>
+      <Card style={{ width: "90%", height: "150px", backgroundColor:"#f9fbe7" }} sx={{ padding: "20px" }}  >
         <cardContent>
           <Box style={{ display: "flex", justifyContent: "space-between" }}>
             <Button
@@ -36,14 +36,14 @@ function SearchCard() {
             >
               PO
             </Button>
-            <Button
-              variant="contained"
-              color="inherit"
-              sx={{ borderRadius: "50%" }}
-              disableRipple
-            >
-              <TuneIcon />
-            </Button>
+            <Chip
+     
+      avatar={<TuneIcon />}
+      style={{ backgroundColor: 'black', color: '#76ff03' }}
+     
+    />
+              
+           
           </Box>
 
           <Box style={{ display: "flex", justifyContent: "space-between" }}>
@@ -66,13 +66,14 @@ function SearchCard() {
             justifyContent="space-between"
           >
             <Grid item xs={6}>
-              <Button variant="text" style={{ color: "black" }} endIcon={<KeyboardArrowDownIcon />}>
+              <Button size="small" variant="text" style={{ color: "black", fontWeight: 'bold', borderBottom: '2px solid #000000' }} endIcon={<KeyboardArrowDownIcon />}>
                 Sort
               </Button>
-              <Button  
-                style={{ color: "black" }}
+              <Button 
+              size="small" 
+                style={{ color: "black", fontWeight: 'bold', borderBottom: '2px solid #000000'  }}
                 variant="text"
-                sx={{ borderBottom: "0.5px solid black" }}
+               
 
                 endIcon={<KeyboardArrowDownIcon />}
               >
@@ -80,13 +81,14 @@ function SearchCard() {
               </Button>
               
             </Grid>
-
-            <Button variant="text" style={{ color: "black" }}>
+            <Grid item xs={6}>
+            <Button size="small" variant="text" style={{ color: "black",   fontWeight: 'bold', borderBottom: '2px solid #000000'  }}>
               Clear
             </Button>
-            <Button variant="text" style={{ color: "black" }}>
+            <Button size="small" variant="text" style={{ color: "black", fontWeight: 'bold' , borderBottom: '2px solid #000000'  }}>
               Search
             </Button>
+            </Grid>
           </Grid>
         </cardContent>
       </Card>
