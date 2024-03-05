@@ -10,11 +10,12 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 import Chip from '@mui/material/Chip'
 function SearchCard() {
   return (
     <>
-      <Card style={{ width: "90%", height: "150px", backgroundColor:"#f9fbe7" }} sx={{ padding: "20px" }}  >
+      <Card style={{ width: "100%", height: "150px", backgroundColor:"#f9fbe7" }} sx={{ padding: "20px" }}  >
         <cardContent>
           <Box style={{ display: "flex", justifyContent: "space-between" }}>
             <Button
@@ -30,22 +31,23 @@ function SearchCard() {
             </Button>
             <Button
               variant="contained"
+              style={{width:'200px',padding:"10px",display:'flex',justifyContent:'space-between'}}
               color="inherit"
               sx={{ borderRadius: "20px" }}
-              endIcon={<KeyboardArrowDownIcon />}
+              endIcon={<KeyboardArrowDownIcon  />}
             >
-              PO
+              Po
             </Button>
             <Chip
      
-      avatar={<TuneIcon />}
-      style={{ backgroundColor: 'black', color: '#76ff03' }}
+      avatar={<TuneIcon style={{color:'green'}} />}
+      style={{ backgroundColor: 'black', color: '#76ff03', width:'50px',height:'50px',borderRadius:'60px' }}
      
     />
               
            
           </Box>
-
+          
           <Box style={{ display: "flex", justifyContent: "space-between" }}>
             <TextField
               id="standard-basic"
@@ -57,6 +59,7 @@ function SearchCard() {
               id="standard-basic"
               label="Enter order id"
               variant="standard"
+              
             />
           </Box>
 
@@ -65,27 +68,22 @@ function SearchCard() {
             display="flex"
             justifyContent="space-between"
           >
-            <Grid item xs={6}>
+            <Grid item xs={6} sx={{marginRight:'90px'}}>
               <Button size="small" variant="text" style={{ color: "black", fontWeight: 'bold', borderBottom: '2px solid #000000' }} endIcon={<KeyboardArrowDownIcon />}>
                 Sort
               </Button>
-              <Button 
-              size="small" 
-                style={{ color: "black", fontWeight: 'bold', borderBottom: '2px solid #000000'  }}
-                variant="text"
-               
-
-                endIcon={<KeyboardArrowDownIcon />}
-              >
+              <Button size="small" variant="text" style={{ color: "black", fontWeight: 'bold', borderBottom: '2px solid #000000',marginLeft:'20px'   }} endIcon={<KeyboardArrowDownIcon />}>
                 Group By
               </Button>
+
+              
               
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={6}  >
             <Button size="small" variant="text" style={{ color: "black",   fontWeight: 'bold', borderBottom: '2px solid #000000'  }}>
               Clear
             </Button>
-            <Button size="small" variant="text" style={{ color: "black", fontWeight: 'bold' , borderBottom: '2px solid #000000'  }}>
+            <Button size="small" variant="text" style={{ color: "black", fontWeight: 'bold' , borderBottom: '2px solid #000000',marginLeft:'20px'  }}>
               Search
             </Button>
             </Grid>
